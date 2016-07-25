@@ -15,7 +15,8 @@ var CommentList = React.createClass({
   render: function() {
     return (
       <div className="commentList">
-        Hello, world! I am a CommentList.
+        <Comment author="Sandra Adams">This is one comment</Comment>
+        <Comment author="Kelson Adams">This is *another* comment</Comment>
       </div>
     );
   }
