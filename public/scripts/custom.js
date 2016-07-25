@@ -1,6 +1,6 @@
 var CommentBox = React.createClass({
 
-	loadCommentsFromServer: function() {}
+	loadCommentsFromServer: function() {
 	
 		$.ajax({
 			url: this.props.url,
@@ -15,7 +15,6 @@ var CommentBox = React.createClass({
 
 		});
 	},
-
 
 	getInitialState: function() {
 		return {data: []};
@@ -78,12 +77,7 @@ var Comment = React.createClass({
 	}
 })
 
-var data = [
-  {id: 1, author: "Sandra Adams", text: "This is one comment"},
-  {id: 2, author: "Kelson Adams", text: "This is *another* comment"}
-];
-
 ReactDOM.render(
-  <CommentBox data={data} />,
+  <CommentBox url="/api/comments" pollInterval={2000} />,
   document.getElementById('content')
 );
