@@ -55,7 +55,6 @@ var CommentList = React.createClass({
 });
 
 var CommentForm = React.createClass({
-
   getInitialState: function() {
     return {author: '', text: ''};
   },
@@ -65,7 +64,6 @@ var CommentForm = React.createClass({
   handleTextChange: function(e) {
     this.setState({text: e.target.value});
   },
-  
   render: function() {
     return (
       <form className="commentForm">
@@ -84,6 +82,9 @@ var CommentForm = React.createClass({
         <input type="submit" value="Post" />
       </form>
     );
+  }
+});
+
 
 var Comment = React.createClass({
 	render: function() {
